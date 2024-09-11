@@ -68,7 +68,7 @@ Welcome to the RDBMS Project! This project implements a Relational Database Mana
    - Perform operations like union, difference, cartesian product, projection, selection, renaming, and natural join.
 
 ## 📸 Screenshots
-![alt text](image.png)
+![ScreenShot](image1.png)
 
 
 ## 📜 License
