@@ -1,0 +1,4 @@
+/mnt/c/Users/91700/OneDrive/Desktop/DBMS-using-Cpp-main
+
+
+terminal-> ubuntu-> cd directory-> code . -> ./hello -> 

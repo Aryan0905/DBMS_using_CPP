@@ -365,6 +365,9 @@ Relation *naturaljoin(Relation *_R1, Relation *_R2, list<string> joinattr)
     // construct DNFformula and filter res accordingly
     DNFformula *f = new DNFformula;
     res = B._cartesianproduct(R1, R2);
+
+    res->relation_print();
+
     for (auto it1 : R1->recs)
     {
         for (auto it2 : R2->recs)
@@ -373,7 +376,6 @@ Relation *naturaljoin(Relation *_R1, Relation *_R2, list<string> joinattr)
             bool x1 = true;
             for (auto i : common_attributes)
             {
-
                 if (*it1->attrptr[R1_index[i]] == *it2->attrptr[R2_index[i]])
                 {
                     temp.push_back(make_tuple(i, '=', it1->attrptr[R1_index[i]]));
@@ -394,6 +396,10 @@ Relation *naturaljoin(Relation *_R1, Relation *_R2, list<string> joinattr)
         }
     }
     res = B._selection(res, f);
+    
+    // testing output
+    cout<<"Testing data"<<endl;
+    res->relation_print();
 
     // remove the reversed colomn
     list<string> selection;

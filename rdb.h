@@ -29,6 +29,7 @@ public:
 };
 class Record
 {
+  // polymorphism
   vector<Attr *> attrptr;
 
 public:
